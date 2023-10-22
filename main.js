@@ -1,4 +1,31 @@
-console.log("Main.js working")
+console.log("Main.js working");
+
+let logo = document.querySelector(".logo");
+
+
+let str = "MyCurrencyConverter";
+let i=0;
+setTimeout(logomaker,1000);
+
+function logomaker(){
+        console.log(logo.innerHTML);
+        logo.innerHTML =  str.substring(0,i);
+        i++;
+        console.log(i);
+        if(i<=str.length){
+            setTimeout(logomaker,700);
+        }
+        
+}
+
+// while(i<=str.length){
+    // console.log(logo.innerHTML);
+    // logo.innerHTML =  str.substring(0,i);
+    // i++;
+    // setTimeout(()=>{
+    //     console.log(i);
+    // },2000);
+// }
 
 const populate = async (value, currency) => {
     let myStr = ""
